@@ -1,0 +1,88 @@
+//
+// Utility
+//
+
+// color
+.tcMain
+	color: $main_text_color !important
+.tcSub
+	color: $sub_text_color !important
+.tcAccent
+	color: $accent_text_color !important
+
+/* float */
+.fl
+	float: left !important
+.fr
+	float: right !important
+
+/* align */
+.taL
+	text-align: left !important
+.taR
+	text-align: right !important
+.taC
+	text-align: center !important
+
+/* size */
+.txXS
+	font-size: 10px !important
+.txSS
+	font-size: 11px !important
+.txS
+	font-size: 12px !important
+.txM
+	font-size: 14px !important
+.txL
+	font-size: 16px !important
+.txLL
+	font-size: 18px !important
+.txXL
+	font-size: 20px !important
+
+/* Margin Padding */
+.noMargin
+	margin: 0 !important
+.noPadding
+	padding: 0 !important
+
+
+for num in (1..10)
+	.mt-{num * 5}
+		margin-top num * 5px !important
+	.mr-{num * 5}
+		margin-right num * 5px !important
+	.mb-{num * 5}
+		margin-bottom num * 5px !important
+	.ml-{num * 5}
+		margin-left num * 5px !important
+	.pt-{num * 5}
+		padding-top num * 5px !important
+	.pr-{num * 5}
+		padding-right num * 5px !important
+	.pb-{num * 5}
+		padding-bottom num * 5px !important
+	.pl-{num * 5}
+		padding-left num * 5px !important
+
+/* Clear */
+.clr
+	clear: both
+
+// ClearFix
+.clearfix
+	&:after
+		content: ""
+		display: block
+		clear: both
+
+/* display */
+.display-pc
+	@media only screen and (max-width: $point_sp)
+		display: none !important
+
+.display-sp
+	display: none
+	@media only screen and (max-width: $point_sp)
+		display: block !important
+

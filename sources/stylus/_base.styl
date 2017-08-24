@@ -1,0 +1,214 @@
+//
+// Base
+//
+
+body
+	margin: 0 auto
+	color: $text_color_main
+	font-size: 1.4rem
+	font-family: $base_font
+	line-height: 1.7
+	-webkit-text-size-adjust: 100%
+
+	&#top
+		background: url(/images/top/bg_body.png) center top no-repeat
+
+// img
+// 	&[src*="@sp."]
+// 		display: none !important
+
+// 	@media only screen and (max-width: $point_sp)
+// 		&[src*="@pc."]
+// 			display: none !important
+// 		&[src*="@sp."]
+// 			display: inline !important
+
+/*! --------------------------------------------------
+ 01: Wrapper Style
+ -------------------------------------------------- */
+.wrap
+	position: relative
+	width: $base_width
+	margin-right: auto
+	margin-left: auto
+
+
+/*! --------------------------------------------------
+ 02: Link Style
+ -------------------------------------------------- */
+a
+	color: $link_color
+	text-decoration: none
+	transition: .5s
+	&:hover
+		text-decoration: underline
+
+
+/*! --------------------------------------------------
+ 03: Header Style
+ -------------------------------------------------- */
+.header
+	position: relative
+	min-width: $base_width
+	background-color: #fff
+
+	&__logo
+		position: relative
+		z-index: 3
+
+	@media only screen and (max-width: $point_tb)
+		&__logo
+			position: relative
+
+
+
+/*! nav-global */
+.nav-global
+	display: block
+	$this = selector()
+
+
+/*! nav-utility */
+.nav-utility
+	display: block
+
+
+/*! --------------------------------------------------
+ 04: Contents Style
+-------------------------------------------------- */
+/*! main
+------------------------------ */
+.main
+	position: relative
+	padding-bottom: 60px
+
+
+/*! container
+------------------------------ */
+.container
+	padding-top: 70px
+	> .wrap
+		&::after
+			content: ""
+			display: block
+			clear: both
+
+
+/*! contents
+------------------------------ */
+.contents
+	float: left
+	width: 780px
+
+	&--main
+		float: none
+		width: auto
+
+
+/*! side
+------------------------------ */
+.side
+	float: right
+	width: 280px
+
+/*! nav-side  */
+.nav-side
+	display: block
+
+
+/*! breadcrumb
+------------------------------ */
+.breadcrumb
+	padding-top: 10px
+	padding-bottom: 10px
+	transition: .5s
+	ul
+		font-size: 0
+		letter-spacing: -1em
+		word-spacing: -1em
+	li
+		display: inline-block
+		font-size: 1.4rem
+		letter-spacing: normal
+		word-spacing: normal
+		vertical-align: top
+		&::before
+			content: ""
+			display: inline-block
+			width: 5px
+			height: 5px
+			margin-right: 10px
+			margin-left: 10px
+			border-top: 1px solid $color_main
+			border-right: 1px solid $color_main
+			transform: rotate(45deg)
+			vertical-align: 2px
+		&:first-child
+			&::before
+				content: none
+
+
+/*! pagetop
+------------------------------ */
+.pagetop
+	display: none
+	overflow: hidden
+	position: absolute
+	bottom: -46px
+	right: 35px
+	text-indent: -9999px
+	z-index: 9999
+
+	&.is-fixed
+		position: fixed
+		bottom: 35px
+
+	a
+		display: block
+		width: 92px
+		height: 92px
+		&::before
+		&::after
+			content: ""
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%) rotate(-45deg)
+			transition: .5s
+		&::before
+			width: 64px
+			height: 64px
+			background-color: #a1a5a7
+		&::after
+			width: 18px
+			height: 18px
+			border-top: 3px solid $text_color_sub
+			border-right: 3px solid $text_color_sub
+		&:hover
+			&::before
+				opacity: .8
+			&::after
+				margin-top: -5px
+
+
+
+/*! --------------------------------------------------
+ 05: Footer Style
+ -------------------------------------------------- */
+.footer
+	display: block
+
+
+/*! nav-footer */
+.nav-footer
+	display: block
+
+
+/*! copyright */
+.copyright
+	padding-top: 15px
+	padding-bottom: 20px
+	background-color: #222936
+	color: #a1a5a7
+	font-size: 1.1rem
+	text-align: center
